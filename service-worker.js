@@ -1,9 +1,10 @@
-var CACHE_ID = 'tech-session-v1';
+var CACHE_ID = 'tech-session-v2';
+
 
 var URLS_TO_CACHE = [
-   '/styles.css',
-   '/js/jquery.flip.min.js',
-   '/img/*.png',
+   'style.css',
+   'js/jquery.scrollTo.min.js',
+   'img/font-1.jpg'
 ]
 
 
@@ -66,6 +67,6 @@ self.addEventListener('activate', function(event) {
  /**
   * SYNC
   */
-// self.addEventListener('sync', function(event) {
-//   self.registration.showNotification("Sync event fired!");
-// });
+self.addEventListener('sync', function(event) {
+  self.registration.showNotification("Sync event fired!");
+});
